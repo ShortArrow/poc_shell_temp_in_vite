@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "target": "ESNext",
+    "outDir": "out",
+    "rootDir": "src",
+    "lib": ["esnext", "DOM"],
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "typeRoots": ["src/types"],
+    "esModuleInterop": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "resolveJsonModule": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "out"]
+}

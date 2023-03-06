@@ -1,0 +1,68 @@
+{
+  "name": "poc-shell-temp-in-vite",
+  "version": "0.0.1",
+  "description": "poc",
+  "displayName": "poc_shell_temp_in_vite",
+  "main": "./dist/extension.js",
+  "repository": "https://github.com/ShortArrow/poc_shell_temp_in_vite.git",
+  "author": "shortarrow <bamboogeneral@shortarrow.jp>",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "contributes": {
+    "commands": [
+      {
+        "command": "poc-shell-temp-in-vite.helloWorld",
+        "title": "PoC Shell Temp: Hello World"
+      },
+      {
+        "command": "poc-shell-temp-in-vite.loadText",
+        "title": "PoC Shell Temp: Load text"
+      },
+      {
+        "command": "poc-shell-temp-in-vite.fromMod",
+        "title": "PoC Shell Temp: Load from mod"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run build",
+    "build": "vite build",
+    "dev": "yarn run build -- --watch",
+    "release": "npx bumpp --commit --tag --push",
+    "compile": "yarn run build",
+    "package": "yarn run build",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "yarn run compile-tests && yarn run compile && yarn run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.36.0",
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "18.14.1",
+    "@types/vscode": "^1.75.0",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
+    "@vscode/test-electron": "^2.2.3",
+    "eslint": "^8.34.0",
+    "glob": "^9.1.0",
+    "mocha": "^10.2.0",
+    "pkg-up": "^4.0.0",
+    "ts-loader": "^9.4.2",
+    "tsup": "^6.0.0",
+    "types-package-json": "^2.0.31",
+    "typescript": "^4.9.5",
+    "vite": "^4.1.4"
+  },
+  "dependencies": {
+    "golb": "^0.0.9"
+  }
+}
