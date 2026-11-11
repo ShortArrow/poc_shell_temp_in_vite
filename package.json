@@ -57,10 +57,10 @@
     "mocha": "^10.2.0",
     "pkg-up": "^4.0.0",
     "ts-loader": "^9.4.2",
-    "tsup": "^6.0.0",
+    "tsup": "^8.3.5",
     "types-package-json": "^2.0.31",
     "typescript": "^4.9.5",
-    "vite": "^4.1.4"
+    "vite": "^6.4.5"
   },
   "dependencies": {
     "golb": "^0.0.9"
